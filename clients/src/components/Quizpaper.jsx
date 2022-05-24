@@ -6,44 +6,36 @@ const Quizpaper = () => {
     const id = params.quizid;
     console.log(id)
     
-     const [allQues, setallQues] = useState([])
-    const [toggleAns, settoggleAns] = useState('none')
+     const [allQues, setallQues] = useState(JSON.parse(localStorage.getItem('quiz')))
+     console.log(allQues)
+    const [toggleAns, settoggleAns] = useState('')
     const [toggleAnsText, settoggleAnsText] = useState('Answer')
-    const toggleAnsfun =()=>{
-        if(toggleAns === 'block')
-        {
-            settoggleAns('none')
-           settoggleAnsText('Answer')
-        }
-        else
-        {
-        settoggleAns('block')
-        settoggleAnsText('Hide')
-        }
-    }
-    const getallquestions= async (e)=>{
-      
-      try{
-       const res = await fetch(`/getOnequiz/${id}`,{
-        method:"GET",
-        headers:{
-         
-          "Content-Type":"application/json" 
+    const toggleAnsfun =(e)=>{ 
        
-        }  
-    })
-    const data =await res.json()
-    setallQues( data.quizdata.Quizcontent)
-  }
-  catch(err){
-    console.log(err)
-  }
     }
-    useEffect(() => {
+  //   const getallquestions= async (e)=>{
       
-      getallquestions();
+  //     try{
+  //      const res = await fetch(`/getOnequiz/${id}`,{
+  //       method:"GET",
+  //       headers:{
+         
+  //         "Content-Type":"application/json" 
+       
+  //       }  
+  //   })
+  //   const data =await res.json()
+  //   setallQues( data.quizdata.Quizcontent)
+  // }
+  // catch(err){
+  //   console.log(err)
+  // }
+  //   }
+  //   useEffect(() => {
+      
+  //     getallquestions();
      
-    }, [ ])
+  //   }, [ ])
     const [choosedAndColor, setchoosedAndColor] = useState('')
    
   return (
@@ -74,7 +66,7 @@ const Quizpaper = () => {
            <span className='answer-num'> D. </span>  {ques.D}
            </div>
       </div>
-      <button onClick={toggleAnsfun}>{toggleAnsText}</button>
+      <button id={index} onClick={toggleAnsfun}>{toggleAnsText}</button>
        <div style={{display:toggleAns}} className="explaination">
        <span className='explaination-num'> {ques.ans}. </span>   {ques.explaination}
        </div>

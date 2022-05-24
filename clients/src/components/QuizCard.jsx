@@ -5,6 +5,7 @@ import './QuizCard.css'
 function QuizCard(props) {
   const value = props.quiz._id
  const url = `/quiz/${value}`
+ localStorage.setItem("quiz",JSON.stringify(props.quiz.Quizcontent))
   return (
     <Link className='quiz-wrapper card' to={url}>
     <div className='quiz-card   '>

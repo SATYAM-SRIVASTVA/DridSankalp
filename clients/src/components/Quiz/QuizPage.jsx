@@ -55,7 +55,7 @@ catch(err){
                return (
                  <QuizCard  
 
-                 quiz={quiz}
+                  quiz={quiz}
                  /> 
                )
              } )
