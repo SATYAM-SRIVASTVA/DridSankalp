@@ -1,56 +1,65 @@
+/* body {
+    background: rgb(99, 39, 120)
+} */
 
-.User{
-    width: 100%;
-    height: 100vh;
+.form-control:focus {
+    box-shadow: none;
+    border-color: #BA68C8
+}
+
+.profile-button {
+    background: rgb(99, 39, 120);
+    box-shadow: none;
+    border: none
+}
+
+.profile-button:hover {
+    background: #682773
+}
+
+.profile-button:focus {
+    background: #682773;
+    box-shadow: none
+}
+
+.profile-button:active {
+    background: #682773;
+    box-shadow: none
+}
+
+.back:hover {
+    color: #682773;
+    cursor: pointer
+}
+
+.labels {
+    font-size: 11px
+}
+
+.add-experience:hover {
+    background: #BA68C8;
+    color: #fff;
+    cursor: pointer;
+    border: solid 1px #BA68C8
+}
+.card-cont{
+    width: 80%;
+    height: 12rem;
+    background: rgb(99, 39, 120);
+    border-radius: 4px;
+    color: white;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center;   
+}
+.card-cont:hover{
+    cursor: pointer;
+    background-color:#BA68C8;
+    border: 4px solid black;
+}
+.card-cont>a{
+    color: white;
+    text-decoration: none;
 }
 
-.user-wrapper{
-    width: 60vw;
-    height: 70vh;
-    background-color:firebrick;
-}
-.user-detail{
-    width: 40%;
-    height: 100%;
-    background-color: blue;
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-.user-detail>*{
-    width: 100%;
-    
-}
-.user-img-container{
-    height: 50%;
-    width: 70%;
-    background-color: white;
-    border-radius: 50%;
-    margin-bottom: 2rem;
-
-}
-.user-performance{
-    width: 60%;
-}
-.toggle-cont{
-    width: 100%;
-    display: flex;
-     justify-content: center;
-     align-items: center;
-}
-.toggle-cont>p{
-   width: 50%;
-   text-align: center;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   height: 2.5rem;
-   font-size: 1.2rem;
-   background-color: white;
-   border: 1px solid black;
-}
+ 
