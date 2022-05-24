@@ -4,8 +4,8 @@ import "./User.css";
 const User = () => {
   return (
     <div>
-      <div className="container rounded bg-white mt-5 mb-5">
-        <div className="row">
+      <div className="containers   rounded bg-white mt-5 mb-5">
+        <div className="row m-0">
           <div className="col-md-3 border-right">
             <div className="d-flex flex-column align-items-center text-center p-3 py-5">
               <img

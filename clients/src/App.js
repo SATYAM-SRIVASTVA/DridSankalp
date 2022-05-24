@@ -13,6 +13,7 @@ import Coursesoverview from './Courseoverview.jsx'
 import CoursePage from './components/Courses/CoursePage.jsx';
 import Quizpaper from './components/Quizpaper';
 import User from './User';
+import Notesupdate from './components/Notesupdate';
  function App() {
   return ( 
     <>  
@@ -28,6 +29,7 @@ import User from './User';
            <Route path='/notes/notesId' element={<Coursesoverview/> }/>
            <Route path='uploadNotes' element={<UploadNotes/>}/> 
            <Route path='/user' element={<User/>}/>
+           <Route path='/admin' element={<Notesupdate/>}/>
          </Routes> 
        </Router> 
     </>
